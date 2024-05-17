@@ -4,7 +4,7 @@ import type { HMR_ACTION_TYPES } from '../../server/dev/hot-reloader-types'
 import { addMessageListener } from '../components/react-dev-overlay/pages/websocket'
 
 type VerticalPosition = 'top' | 'bottom'
-type HorizonalPosition = 'left' | 'right'
+type HorizontalPosition = 'left' | 'right'
 
 export interface ShowHideHandler {
   show: () => void
@@ -18,7 +18,7 @@ export default function initializeBuildWatcher(
   const shadowHost = document.createElement('div')
   const [verticalProperty, horizontalProperty] = position.split('-', 2) as [
     VerticalPosition,
-    HorizonalPosition,
+    HorizontalPosition,
   ]
   shadowHost.id = '__next-build-watcher'
   // Make sure container is fixed and on a high zIndex so it shows
